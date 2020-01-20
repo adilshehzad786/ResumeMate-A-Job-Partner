@@ -1,0 +1,1 @@
+web: gunicorn resumecreator.resumecreator.wsgi
