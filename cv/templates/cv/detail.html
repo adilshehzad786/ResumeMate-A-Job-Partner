@@ -1,0 +1,723 @@
+{% extends 'home/premium_base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block title %} {{personal_info.full_name}}| {{ block.super }}{% endblock title %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Template Preview </title>
+  <!-- / -->
+
+  <!---Font Icon-->
+  <link href="{% static 'pro/plugin/font-awesome/css/fontawesome-all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pro/plugin/themify-icons/themify-icons.css' %}" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Plugin CSS -->
+  <link href="{% static 'pro/plugin/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pro/plugin/owl-carousel/css/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pro/plugin/magnific/magnific-popup.css' %}" rel="stylesheet">
+  <link href="{% static 'pro/plugin/nav/css/component.css' %}" rel="stylesheet" />
+  <!-- / -->
+
+  <!-- Theme Style -->
+
+  <link href="{% static 'pro/css/styles.css' %}" rel="stylesheet">
+  <link href="{% static 'pro/css/color/default.css' %}" rel="stylesheet">
+
+  <script src="{% static 'pro/plugin/nav/js/modernizr-custom.js' %}"></script>
+  <!-- / -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- / -->
+
+
+</head>
+
+<!-- Body Start -->
+<body class="dark-body">
+   <!-- Loading -->
+  <div id="loading">
+
+    <div class="load-circle" ><span class="one"></span></div>
+      <div>
+	<center>Download Resources From Cloud Storage </center>
+	</div>
+  </div>
+
+  <!-- / -->
+
+
+
+  <!-- navigation -->
+  <nav class="pages-nav">
+    <div class="pages-nav__item"><a class="link link--page" href="#home">Home</a></div>
+    <div class="pages-nav__item"><a class="link link--page" href="#about">About Me</a></div>
+    <div class="pages-nav__item"><a class="link link--page" href="#resume">Resume</a></div>
+	<div class="pages-nav__item"><a class="link link--page" href="#portfolio">My Projects</a></div>
+   <div class="pages-nav__item"><a class="link link--page" href="#contact">Contact</a></div>
+  </nav>
+  <!-- /navigation-->
+
+  <div class="pages-stack">
+
+    <!--
+    ====================
+    Home Banner
+    ====================
+     -->
+
+    <div class="page home-banner white-bg" id="home">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters full-screen">
+          <div class="col-lg-3 col-xl-4 white-bg">
+            <div class="d-flex align-items-end home-user-avtar v-center-box">
+              <img src="{{ personal_info.banner_picture_1.url }}" title="" alt="">
+            </div>
+          </div>
+          <div class="col-lg-9 col-xl-8">
+            <div class="page-scroll">
+              <div class="page-content">
+                <div class="v-center-box d-flex align-items-center">
+                  <div class="home-text">
+
+                    <h6 class="dark-color theme-after">Hello, There</h6>
+                    <h1 class="dark-color blue-after">I'm {{personal_info.full_name}}</h1>
+
+                      <a href="https://wa.me/{{personal_info.contact_no}}}}" target="_blank"></a><p> <span id="type-it-again"></span></p>
+                    <div class="btn-bar">
+                    {% if personal_info.resume_upload.url %}
+                    <div class="btn-bar">
+
+                      <a href="{{personal_info.resume_upload.url}}" class="btn btn-theme">Download CV</a>
+                    </div>
+{% endif %}
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <p>Made With <i class="fa fa-heart" style="font-size:20px"> </i> &nbsp; With <a href="{% url 'home' %}">ResumeMate</a>  </p>
+
+{% if request.user == personal_info.user %}
+                    <span style="float: right;">
+                        <a class="btn btn-success btn-sm" href="{{personal_info.get_update_url}}" role="button">Edit</a>
+                    </span>
+                    {% endif %}
+                    </div>
+
+                  </div>
+                  <ul class="social-icons">
+                    <li><a class="facebook" href="{{personal_info.facebook}}"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="twitter" href="{{personal_info.twitter}}"><i class="fab fa-twitter"></i></a></li>
+                      <li><a class="linkedin" href="{{personal_info.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    ====================
+    About Us
+    ====================
+     -->
+    <div class="page about-section white-bg" id="about">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-xl-4 page-title" style="background-image: url({% static 'pro/img/title-1.jpg' %}); ">
+            <div class="v-center-box d-flex align-items-end">
+              <h2>About Me</h2>
+            </div>
+          </div>
+          <div class="col-lg-9 col-xl-8">
+            <div class="page-scroll">
+              <div class="page-content">
+
+                <!--
+                ==========================
+                  Page Titel
+                ==========================
+                -->
+                <div class="section-titel">
+                  <h6 class="theme-after dark-color">WHO I AM</h6>
+                  <div class="st-title">
+                    <h2 class="theme-after dark-color">ABOUT</h2>
+                  </div>
+                </div>
+
+                <!--
+                ==========================
+                  About Us
+                ==========================
+                -->
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="{{ personal_info.round_cirlce_picture.url }}" title="" alt="">
+                  </div>
+
+                  <div class="col-md-8 md-m-30px-t">
+                    <div class="about-text">
+                      <h3 class="dark-color">I'm {{personal_info.first_name}}</h3>
+
+                    </div> <!-- about-text -->
+{% if personal_info.skills_one or personal_info.skills_two or personal_info.skills_three or personal_info.skills_four %}
+                    <div class="row m-30px-t">
+                      <div class="col-md-6 col-sm-6 m-30px-b">
+                        <div class="feature-box">
+                          <i class="icon dark-color theme-after ti-ruler-pencil"></i>
+                          <div class="feature-content">
+                            <h5 class="dark-color">{{personal_info.skills_one}}</h5>
+                          </div>
+                        </div>
+                      </div> <!-- col -->
+
+                      <div class="col-md-6 col-sm-6 m-30px-b">
+                        <div class="feature-box">
+                          <i class="icon dark-color theme-after ti-image"></i>
+                          <div class="feature-content">
+                            <h5 class="dark-color">{{personal_info.skills_two}}</h5>
+                          </div>
+                        </div>
+                      </div> <!-- col -->
+
+                      <div class="col-md-6 col-sm-6 m-30px-b">
+                        <div class="feature-box">
+                          <i class="icon dark-color theme-after ti-brush-alt"></i>
+                          <div class="feature-content">
+                            <h5 class="dark-color">{{personal_info.skills_three}}</h5>
+                          </div>
+                        </div>
+                      </div> <!-- col -->
+
+                      <div class="col-md-6 col-sm-6 m-30px-b">
+                        <div class="feature-box">
+                          <i class="icon dark-color theme-after ti-mobile"></i>
+                          <div class="feature-content">
+                            <h5 class="dark-color">{{personal_info.skills_four}}</h5>
+                          </div>
+                        </div>
+                      </div> <!-- col -->
+                    </div> <!-- row -->
+{% endif %}
+                  {% if personal_info.resume_upload.url %}
+                    <div class="btn-bar">
+
+                      <a href="{{personal_info.resume_upload.url}}" class="btn btn-theme">Download CV</a>
+                    </div>
+{% endif %}
+                  </div>
+
+                </div> <!-- row -->
+
+                <!--
+                ==========================
+                  Counter
+                ==========================
+                -->
+                  {% if request.user == personal_info.user %}
+                    <span style="float: right;">
+                        <a class="btn btn-success btn-sm" href="{{personal_info.get_update_url}}" role="button">Edit</a>
+                    </span>
+                    {% endif %}
+
+                <div class="counter-row m-50px-t p-40px-t lg-m-35px-t lg-p-25px-t sm-p-15px-t">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 md-m-15px-tb">
+                      <div class="counter-col counter-box">
+                        <div class="counter-data" data-count="2">
+                            <i class="theme-color ti-face-smile"></i>
+                            <div class="count dark-color">{{personal_info.happy_client}}</div>
+                            <h6>Happy Clients</h6>
+                        </div>
+                      </div>
+                    </div> <!-- col -->
+
+                    <div class="col-md-3 col-sm-6 md-m-15px-tb">
+                      <div class="counter-col counter-box">
+                        <div class="counter-data" data-count="2">
+                            <i class="theme-color ti-headphone"></i>
+                            <div class="count dark-color">{{personal_info.telephonic_talk}}</div>
+                            <h6>Telephonic Talk</h6>
+                        </div>
+                      </div>
+                    </div> <!-- col -->
+
+                    <div class="col-md-3 col-sm-6 md-m-15px-tb">
+                      <div class="counter-col counter-box">
+                        <div class="counter-data" data-count="5">
+                            <i class="theme-color ti-camera"></i>
+                            <div class="count dark-color">{{personal_info.photo_capture}}</div>
+                            <h6>Photo Capture</h6>
+                        </div>
+                      </div>
+                    </div> <!-- col -->
+
+                    <div class="col-md-3 col-sm-6 md-m-15px-tb">
+                      <div class="counter-col counter-box">
+                        <div class="counter-data" data-count="02">
+                            <i class="theme-color ti-thumb-up"></i>
+                            <div class="count dark-color">{{ personal_info.total_projects }}</div>
+                            <h6>Projects</h6>
+                        </div>
+                      </div>
+                    </div> <!-- col -->
+
+                  </div> <!-- row -->
+                </div>
+
+              </div> <!-- page-content -->
+            </div> <!-- page-scroll  -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+
+    <!--
+    ====================
+    Services
+    ====================
+     -->
+    <div class="page resume-section white-bg" id="resume">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-xl-4 page-title" style="background-image: url({% static 'pro/img/title-1.jpg' %}); ">
+            <div class="v-center-box d-flex align-items-end">
+
+              <h2>My Resume</h2>
+            </div>
+          </div>
+          <div class="col-lg-9 col-xl-8">
+            <div class="page-scroll">
+              <div class="page-content">
+
+                <!--
+                ==========================
+                  Page Titel
+                ==========================
+                -->
+                <div class="section-titel">
+                  <h6 class="theme-after dark-color">History</h6>
+                  <div class="st-title">
+                    <h2 class="theme-after dark-color">My Resume</h2>
+                   {% if request.user == personal_info.user %}
+<span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_work_experience' %}" role="button">Create Experience</a></span>
+                {% endif %}
+
+{% if request.user == personal_info.user %}
+                    <span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_education' %}" role="button">Create Education</a></span>
+                {% endif %}
+
+                  </div>
+                </div>
+
+                <!--
+                ==========================
+                  Resume Box
+                ==========================
+                -->
+{% for obj in work_experience %}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="resume-row">
+                      <h2 class="theme-after dark-color">Latest Experience</h2>
+                      <ul>
+                        <li>
+                         <div class="r-name">
+                            <i class="theme-bg ti-briefcase"></i>
+                            <span class="dark-color"></span>
+                            <label>{{ obj.job_title }}</label>
+
+
+                             {% if request.user == obj.user %}
+
+                                <span><a class="btn btn-success btn-sm" href="{{obj.get_update_url}}" role="button">Edit</a></span>
+
+                                {% include "cv/delete_confirm.html" %}
+
+
+                                {% endif %}
+
+                          </div>
+                          <div class="r-info">
+                            <p>{{ obj.job_title }}</p>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+{% endfor %}
+              {% for obj in education %}
+                 <div class="col-md-6">
+                    <div class="resume-row">
+                      <h2 class="theme-after dark-color">Education</h2>
+                      <ul>
+                        <li>
+                          <div class="r-name">
+                            <i class="theme-bg fas fa-graduation-cap"></i>
+                            <span class="dark-color">{{obj.subject}}</span>
+                              {% if request.user == obj.user %}
+
+                                <span><a class="btn btn-success btn-sm" href="{{obj.get_update_url}}" role="button">Edit</a></span>
+                                <span><a  href ="#"type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete">Delete</a></span>
+
+
+                                {% endif %}
+                            <label>{{obj.year}}</label>
+                          </div>
+                          <div class="r-info">
+                            <p>{{obj.description}}</p>
+                          </div>
+                        </li>
+                        <li>
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div> <!-- col -->
+                </div> <!-- row -->
+              {% endfor %}
+{% if personal_info.skills_one or personal_info.skills_two or personal_info.skills_three or personal_info.skills_four or personal_info.skills_one_percentage or personal_info.skills_two_percentage or personal_info.skills_three_percentage or personal_info.skills_four_percentage %}
+                <div class="skill-row m-30px-t sm-m-20px-t">
+                    <div class="sub-title m-30px-b">
+                      <h2 class="dark-color theme-after">My Skills</h2>
+                    </div>
+
+                  <div class="row">
+                      <div class="col-md-6 p-30px-r sm-p-15px-r">
+                        <h3 class="dark-color">{{personal_info.skills}}</h3>
+                        <div class="skills">
+                          <div class="progress-lt">
+                            <h6>{{personal_info.skills_one}}</h6>
+                            <span class="theme-bg">{{personal_info.skills_one_percentage}}</span>
+                            <div class="progress">
+                              <div class="progress-bar" style="width:{{personal_info.skills_one_percentage}};">
+                              </div><!-- /progress-bar -->
+                           </div><!-- /progress -->
+                        </div><!-- /progress-lt -->
+
+                         <div class="progress-lt">
+                            <h6>{{personal_info.skills_two}}</h6>
+                            <span class="theme-bg">{{ personal_info.skills_two_percentage }}</span>
+                            <div class="progress">
+                              <div class="progress-bar" style="width{{ personal_info.skills_two_percentage}};">
+                              </div><!-- /progress-bar -->
+                            </div><!-- /progress -->
+                          </div><!-- /progress-lt -->
+
+						  <div class="progress-lt">
+                            <h6>{{ personal_info.skills_three }}</h6>
+                            <span class="theme-bg">{{ personal_info.skills_three_percentage }}</span>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: {{ personal_info.skills_three_percentage }};">
+                              </div><!-- /progress-bar -->
+                            </div><!-- /progress -->
+                          </div><!-- /progress-lt -->
+						  <div class="progress-lt">
+
+
+                            <h6>{{ personal_info.skills_four }}</h6>
+                            <span class="theme-bg">{{ personal_info.skills_four_percentage }}</span>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: {{ personal_info.skills_four_percentage }};">
+                              </div><!-- /progress-bar -->
+                            </div><!-- /progress -->
+                          </div><!-- /progress-lt -->
+
+
+ {% if request.user == personal_info.user %}
+                    <span style="float: right;">
+                        <a class="btn btn-success btn-sm" href="{{personal_info.get_update_url}}" role="button">Edit</a>
+                    </span>
+                    {% endif %}
+{% endif %}
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+              </div> <!-- page-content -->
+
+            </div> <!-- page-scroll  -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+
+
+
+    <!--
+    ====================
+    Portfolio
+    ====================
+     -->
+    <div class="page white-bg" id="portfolio">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-xl-4 page-title" style="background-image: url({{ personal_info.banner_picture_2.url }}); ">
+            <div class="v-center-box d-flex align-items-end">
+              <h2>My Projects</h2>
+            </div>
+          </div>
+          <div class="col-lg-9 col-xl-8">
+            <div class="page-scroll">
+              <div class="page-content">
+{% if request.user == personal_info.user %}
+<span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_project' %}" role="button">Create Project</a></span>
+                {% endif %}
+
+                <!--
+                ==========================
+                  Page Titel
+                ==========================
+                -->
+                <div class="section-titel">
+                  <h6 class="theme-after dark-color">Latest Work</h6>
+                  <div class="st-title">
+                    <h2 class="theme-after dark-color">My Projects</h2>
+                  </div>
+                </div>
+
+                <!--
+                ==========================
+                  Portfolio
+                ==========================
+                -->
+
+                <div class="portfolio-section">
+                  <div class="portfolio-filter m-10px-b">
+                    <ul class="filter text-left text-md-center">
+
+
+                    </ul>
+                  </div> <!-- Portfolio Filter -->
+{% for obj in project %}
+     {% if request.user == obj.user %}
+
+                                <span><a class="btn btn-success btn-sm" href="{{obj.get_update_url}}" role="button">Edit</a></span>
+
+                                {% include "cv/delete_confirm.html" %}
+{% endif %}
+                  <div class="portfolio-content">
+
+                    <ul class="portfolio-cols portfolio-cols-3">
+
+
+
+                      <li class="portfolio-item * ">
+                        <div class="portfolio-col portfolio-hover-01">
+                          <div class="portfolio-img">
+                            <a href="#">
+                              <img src="{{obj.get_photo_url}}" title="" alt="">
+                            </a>
+                            <div class="hover">
+                                <div class="action-btn">
+                                  <a href="" class="popup-video theme-color"><i class="fa fa-play"></i></a>
+                                  <a class="lightbox-gallery theme-color" href="{{obj.get_photo_url}}" title="{{ obj.project_description }}"></a>
+                                    <i class="fas fa-expand"></i>
+                                  </a>
+                                  <a href="{{obj.project_url}}" class="theme-color">
+                                    <i class="fa fa-link"></i>
+                                  </a>
+                                </div> <!-- Video Btn -->
+                            </div> <!-- Hover -->
+
+
+                          </div>
+
+                          <div class="portfolio-info">
+                            <h5>{{obj.project_name}}</h5>
+                            <span>{{obj.joining_year}}</span>
+                          </div>
+                        </div> <!-- Portfolio -->
+                      </li> <!-- col -->
+
+
+
+
+                    </ul>
+                  </div>
+{% endfor %}
+                    </div> <!-- page-content -->
+            </div> <!-- page-scroll  -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+    </div>
+
+    <!--
+    ====================
+    Contact us
+    ====================
+     -->
+
+    <div class="page white-bg" id="contact">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-xl-4 page-title" style="background-image: url({% static 'pro/img/title-4.jpg' %}); ">
+            <div class="v-center-box d-flex align-items-end">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <div class="col-lg-9 col-xl-8">
+            <div class="page-scroll">
+              <div class="page-content">
+
+                <!--
+                ==========================
+                  Page Titel
+                ==========================
+                -->
+                <div class="section-titel">
+                  <h6 class="theme-after dark-color">Get In Touch</h6>
+                  <div class="st-title">
+                    <h2 class="theme-after dark-color">Contact Me</h2>
+                  </div>
+                </div>
+
+
+                <!--
+                ==========================
+                  Contact Us
+                ==========================
+                -->
+              {% for obj in contact_info %}
+                <div class="row">
+                  <div class="col-lg-12 m-30px-b sm-m-15px-b">
+                    <div class="contact-form">
+                        <h4 class="dark-color font-alt m-20px-b">Say Something</h4>
+                        <form class="gform" action="{{obj.gform_link}}" method="post">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="name" name="name" type="text" placeholder="Name" class="validate form-control" required="">
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="email" type="email" placeholder="Email" name="email" class="validate form-control" required="">
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                                </div>
+                                <div class="col-md-12">
+                                <div class="form-group">
+                                  <textarea id="message" placeholder="Your Comment" name="message" class="form-control" required=""></textarea>
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                               </div>
+                                <div class="col-md-12">
+                                  <div class="send">
+                                     <button class="btn btn-theme" type="submit" name="send"> send message</button>
+                                  </div>
+                                  <span class="output_message"></span>
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                  </div> <!-- col -->
+
+                </div>
+
+                   {% if request.user == personal_info.user %}
+                    <span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_gform_link' %}" role="button">Create Education</a></span>
+                {% endif %}
+
+ {% if request.user == obj.user %}
+
+                                <span><a class="btn btn-success btn-sm" href="{{obj.get_update_url}}" role="button">Edit</a></span>
+
+                                {% include "cv/delete_confirm.html" %}
+{% endif %}
+              {% endfor %}
+                <div class="row">
+                  <div class="col-md-4 m-15px-tb">
+                    <div class="contact-info">
+                        <i class="theme-color ti-location-pin"></i>
+                        <h6 class="dark-color font-alt">Our Address</h6>
+                    </div>
+                  </div>
+                  <div class="col-md-4 m-15px-tb">
+                    <div class="contact-info">
+                      <i class="theme-color ti-mobile"></i>
+                      <h6 class="dark-color font-alt">Our Phone</h6>
+                    </div>
+                  </div>
+                  <div class="col-md-4 m-15px-tb sm-m-0px-b">
+                    <div class="contact-info">
+                        <i class="theme-color ti-email"></i>
+                        <h6 class="dark-color font-alt">Our Email</h6>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- page-content -->
+            </div> <!-- page-scroll  -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--
+    ====================
+    Header
+    ====================
+  -->
+  <header class="header theme-bg">
+    <div class="logo">{{personal_info.first_name}}</div>
+    <div class="menu-toggle">
+        <button class="menu-button"><span>Menu</span></button>
+    </div>
+  </header>
+
+  <!-- jQuery -->
+  <script src="{% static 'pro/js/jquery-3.3.1.slim.min.js' %}"></script>
+
+  <!-- Plugins -->
+  <script src="{% static 'pro/plugin/bootstrap/js/popper.min.js' %}"></script>
+  <script src="{% static 'pro/plugin/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'pro/plugin/owl-carousel/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'pro/plugin/typeit-master/typeit.min.js' %}"></script>
+  <script src="{% static 'pro/plugin/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'pro/plugin/magnific/jquery.magnific-popup.min.js' %}"></script>
+
+  <script src="{% static 'pro/plugin/nav/js/classie.js' %}"></script>
+  <script src="{% static 'pro/plugin/nav/js/main.js' %}"></script>
+
+
+
+  <!-- custom -->
+  <script src="{% static 'pro/js/custom.js' %}"></script>
+
+</body>
+<!-- Body End -->
+
+
+
+</html>
+{% endblock %}
