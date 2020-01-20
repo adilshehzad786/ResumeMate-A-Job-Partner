@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c296b3-213d-4811-a3af-bb5cb54461e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resumecreator/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/resumecreator/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +117,7 @@
       <workItem from="1579326336077" duration="4416000" />
       <workItem from="1579331870886" duration="69769000" />
       <workItem from="1579439327234" duration="691000" />
-      <workItem from="1579440207824" duration="27393000" />
+      <workItem from="1579440207824" duration="28360000" />
     </task>
     <servers />
   </component>
