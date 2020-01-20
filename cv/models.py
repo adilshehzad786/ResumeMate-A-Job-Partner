@@ -29,7 +29,7 @@ class PersonalInfo(models.Model):
     nationality = models.CharField(max_length=50)
     contact_no = models.CharField(max_length=14, null=True, blank=True)
     email = models.EmailField()
-    website = models.URLField(null=True, blank=True)
+
     address = models.CharField(max_length=200, null=True, blank=True)
     country = models.CharField(max_length=100)
     facebook=models.URLField(null=True, blank=True)
@@ -131,27 +131,9 @@ class PersonalInfo(models.Model):
         null=True,
         blank=True,
         )
-    banner_picture_2 = models.ImageField(
-        upload_to='profile_pics',
-        null=True,
-        blank=True,
-        height_field="height_field",
-        width_field="width_field",
-        help_text="Please Use 3046 x 4733 For Banner Picture Which Makes Your Resume Attractive  "
 
-    )
 
-    height_field = models.IntegerField(
-        default=1200,
-        null=True,
-        blank=True,
-    )
 
-    width_field = models.IntegerField(
-        default=800,
-        null=True,
-        blank=True,
-    )
     round_cirlce_picture = models.ImageField(
         upload_to='profile_pics',
         null=True,

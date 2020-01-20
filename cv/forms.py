@@ -20,7 +20,7 @@ class PersonalInfoForm(forms.ModelForm):
             "nationality",
             "contact_no",
             "email",
-            "website",
+
             "address",
             "country",
             "language",
@@ -40,7 +40,7 @@ class PersonalInfoForm(forms.ModelForm):
             "interest",
             "bio",
             "banner_picture_1",
-            "banner_picture_2",
+
             "round_cirlce_picture",
             "resume_upload",
 

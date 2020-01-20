@@ -641,11 +641,11 @@
 
                 </div>
 
-                   {% if request.user == personal_info.user %}
-                    <span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_gform_link' %}" role="button">Create Education</a></span>
+                   {% if request.user == request.user %}
+                    <span style="float: right;"><a class="btn btn-success btn-sm" href="{% url 'create_gform_link' %}" role="button">Create Contact</a></span>
                 {% endif %}
 
- {% if request.user == obj.user %}
+ {% if request.user == request.user %}
 
                                 <span><a class="btn btn-success btn-sm" href="{{obj.get_update_url}}" role="button">Edit</a></span>
 
