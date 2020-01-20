@@ -134,6 +134,25 @@ class PersonalInfo(models.Model):
 
 
 
+    def __str__(self):
+        return str(self.user.username)
+
+    def get_update_url(self):
+        return reverse("update_personal_info", kwargs={"pk": self.pk})
+
+    @property
+    def full_name(self):
+        return '%s %s' % (self.first_name, self.last_name)
+
+
+class WorkExperience(models.Model):
+
+    user = models.ForeignKey(User, related_name="works",on_delete=models.CASCADE)
+    company_name = models.CharField(max_length=100)
+    job_title = models.CharField(max_length=100)
+    joining_year = models.DateField()
+    job_description = models.TextField()
+
     round_cirlce_picture = models.ImageField(
         upload_to='profile_pics',
         null=True,
@@ -155,23 +174,6 @@ class PersonalInfo(models.Model):
     )
     resume_upload = models.FileField(upload_to='profile_pics',null=False,help_text="Please Upload Your Resume Otherwise Your Profile Will Not be Created",blank=False,validators=[
         FileExtensionValidator(['pdf', 'docx', 'doc'])])
-    def __str__(self):
-        return str(self.user.username)
-
-    def get_update_url(self):
-        return reverse("update_personal_info", kwargs={"pk": self.pk})
-
-    @property
-    def full_name(self):
-        return '%s %s' % (self.first_name, self.last_name)
-
-
-class WorkExperience(models.Model):
-    user = models.ForeignKey(User, related_name="works",on_delete=models.CASCADE)
-    company_name = models.CharField(max_length=100)
-    job_title = models.CharField(max_length=100)
-    joining_year = models.DateField()
-    job_description = models.TextField()
 
     def get_delete_url(self):
         return reverse("delete_work_experience", kwargs={"pk": self.pk})

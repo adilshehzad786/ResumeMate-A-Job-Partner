@@ -41,8 +41,7 @@ class PersonalInfoForm(forms.ModelForm):
             "bio",
             "banner_picture_1",
 
-            "round_cirlce_picture",
-            "resume_upload",
+
 
             ]
 
@@ -59,7 +58,9 @@ class WorkExperienceForm(forms.ModelForm):
             "company_name",
             "job_title",
             "joining_year",
-            "job_description"
+            "job_description",
+            "round_cirlce_picture",
+            "resume_upload",
             ]
 
 

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c296b3-213d-4811-a3af-bb5cb54461e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cv/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cv/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cv/templates/cv/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv/templates/cv/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resumecreator/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/resumecreator/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +117,7 @@
       <workItem from="1579326336077" duration="4416000" />
       <workItem from="1579331870886" duration="69769000" />
       <workItem from="1579439327234" duration="691000" />
-      <workItem from="1579440207824" duration="34172000" />
+      <workItem from="1579440207824" duration="34867000" />
     </task>
     <servers />
   </component>
@@ -135,5 +136,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/cv/models.py</url>
+          <line>126</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/cv/models.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
