@@ -25,7 +25,7 @@ SECRET_KEY = '*5%)tr$(2+1xc@e-9z-4xk6cqi0w9=h)-qio0px$d^9(e4-cpe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myresumemate.herokuapp.com','https://myresumemate.herokuapp.com/','http://myresumemate.herokuapp.com/']
 
 
 # Application definition
