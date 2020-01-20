@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     # admin
     url(r'^admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
-    url(r'^03084146744', admin.site.urls),
+    url(r'^adminsiteresumemate/', admin.site.urls),
     # accounts
     url(r'^login/$', login_view, name='login'),
     url(r'^register/$', register_view, name='register'),
