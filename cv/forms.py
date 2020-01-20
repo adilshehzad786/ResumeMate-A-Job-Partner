@@ -39,7 +39,7 @@ class PersonalInfoForm(forms.ModelForm):
             'total_projects',
             "interest",
             "bio",
-            "banner_picture_1",
+
 
 
 
@@ -59,6 +59,7 @@ class WorkExperienceForm(forms.ModelForm):
             "job_title",
             "joining_year",
             "job_description",
+
             "round_cirlce_picture",
             "resume_upload",
             ]
