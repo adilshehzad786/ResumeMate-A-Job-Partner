@@ -1,4 +1,4 @@
-<h3> ResumeMate-A-Perfect-Resume-Builder-Using-Django-2.2-Python-3.6 </h3>
+<h3> ResumeMate-A-Perfect-Resume-Builder-Using-Django-2.2-Python-3.7 </h3>
 
 <a href="https://myresumemate.herokuapp.com/">ResumeMate</a>
 
