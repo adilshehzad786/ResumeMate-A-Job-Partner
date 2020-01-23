@@ -1,0 +1,58 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark p-3 bg-light">
+  <div class="container">
+    <a class="navbar-brand bold" href="/">
+      <em>ResumeMate A Job Partner </em>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <div class="mx-auto">
+        <form class="form-inline" method="GET" action="">
+          <div class="input-group">
+            <input name="q" class="form-control" type="text" placeholder="Search...">
+          </div>
+        </form>
+      </div>
+
+      <ul class="navbar-nav ml-auto">
+        {% if request.user.is_authenticated %}
+
+          <a class="nav-link bold" href="{% url 'new_question' %}">Ask a Question</a>
+           <a class="nav-link bold" href="{% url 'Tutorial_page' %}">Hacking Tutorials</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <img src="" alt="">
+              <span class="ml-1 bold">Hello {{ request.user }}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="{% url 'compiler_page' %}">Mr.Compiler</a>
+            <a class="dropdown-item" href="">HackerNews</a>
+              <div class="dropdown-divider"></div>
+
+
+
+              {% if request.user.is_superuser %}
+                <a class="dropdown-item" href="}">Admin Panel</a>
+              {% endif %}
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Welcome Guest
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+              <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+            </div>
+          {% endif %}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
