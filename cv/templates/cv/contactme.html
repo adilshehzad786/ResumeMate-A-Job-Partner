@@ -1,0 +1,191 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>Contact Adil Shehzad as a FreeLancer</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<meta name="robots" content="index,follow" />
+		<link rel="shortcut icon" href="#">
+        <link rel="apple-touch-icon" href="#">
+
+	  	<!-- Facebook and Twitter Share Informations -->
+	  	<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800">
+		<!-- To enable the modal popup, uncomment the next line -->
+		<link rel="stylesheet" href="{% static 'contact/assets/css/bootstrap.min.css' %}">
+
+		<link rel="stylesheet" href="{% static 'contact/contactme/css/select2.min.css'%}">
+		<link rel="stylesheet" href="{% static 'contact/contactme/css/bootstrap-datepicker.standalone.min.css'%}">
+		<link rel="stylesheet" href="{% static 'contact/contactme/css/jquery.timepicker.css'%}">
+		<link rel="stylesheet" href="{% static  'contact/contactme/css/contactme-1.4.css'%}">
+
+
+		<link rel="stylesheet" href="{% static 'contact/assets/lightgallery/css/lightgallery.min.css' %}">
+		<link rel="stylesheet" href="{% static 'contact/assets/css/jonny-1.2.css' %}">
+
+	</head>
+	<body>
+		<section class="jonny">
+			<div class="infos">
+
+				<img src="{% static 'contact/assets/imgs/cover/3.jpg' %}" alt="Cover">
+photogr
+				<div class="contain">
+					<div>
+						<div>
+
+                            <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+                             <br>
+
+							<h1 class="title">FREELANCER<br>PHOTOGRAPHER<br> Web Application Developer <br> </h1>
+
+							<div class="buttons centered">
+								<a href="#" class="icon icon-pic sky-blue gallery-btn" data-galleryid="gallery1">View my gallery</a>
+								<a href="#" class="icon icon-user dark-green" data-toggle="modal" data-target="#popup1">About Me</a>
+							</div>
+							<a href="" target="_blank" class="address">Lahore <br />Pakistan</a>
+							<div class="social">
+								<!-- <a href="https://www.facebook.com" class="facebook" target="_blank"></a> -->
+								<!-- <a href="https://www.messenger.com" class="messenger" target="_blank"></a> -->
+								<a href="https://www.whatsapp.com/" class="whatsapp" target="_blank"></a>
+								<a href="https://www.instagram.com/" class="instagram" target="_blank"></a>
+								<a href="https://www.twitter.com/" class="twitter" target="_blank"></a>
+								<a href="https://www.youtube.com/" class="youtube" target="_blank"></a>
+								<a href="https://www.snapchat.com/" class="snapchat" target="_blank"></a>
+								<!-- <a href="https://www.spotify.com" class="spotify" target="_blank"></a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form">
+				<div>
+					<div>
+						<h3>Contact me<br />for more info</h3>
+						<!-- START - Contact Form -->
+						<form class="gform" action="https://script.google.com/macros/s/AKfycbw86cmXfwlkU7HSlSZ-FkMuuJL9ekBz_L2e0fbZ/exec" method="post" >
+							<section>
+								<div class="form-row">
+									<div class="title">Your name</div>
+									<input type="text" name="name" data-displayname="Name" class="field" placeholder="Your name" required>
+								</div>
+								<div class="form-row">
+									<div class="title">Your e-mail</div>
+									<input type="email" name="email" data-displayname="Email" class="field" placeholder="Your e-mail" required>
+								</div>
+								<div class="form-row">
+									<div class="title">Your phone number</div>
+									<input type="tel" name="phone" data-displayname="Phone" class="field" placeholder="Your phone number" required>
+								</div>
+								<div class="form-row">
+									<div class="title">Select a service</div>
+									<select name="service" data-displayname="Service" class="field" placeholder="Select a service" required>
+										<option default></option>
+										<option value="Photoshoot">Web Application</option>
+										<option value="Corporate">Photoshop Graphic</option>
+										<option value="Wedding">Web Hosting</option>
+
+									</select>
+								</div>
+								<div class="form-row">
+									<div class="title">Message</div>
+									<textarea name="message" data-displayname="Message" class="field" placeholder="Message" required></textarea>
+								</div>
+
+
+
+								<div class="msg"></div>
+
+								<button class="btn" type="submit" data-sending="Sending...">Send</button>
+							</section>
+						</form>
+						<!-- END - Contact Form -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="gallery1" class="gallery-items">
+			<a href="{% static 'contact/assets/imgs/gallery/demo-1.jpg' %}"></a>
+			<a href="{% static 'contact/assets/imgs/gallery/demo-2.jpg' %}"></a>
+			<a href="{% static 'contact/assets/imgs/gallery/demo-3.jpg' %}"></a>
+			<a href="{% static 'contact/assets/imgs/gallery/demo-4.jpg' %}"></a>
+		</section>
+
+		<section id="popup1" class="modal customModal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<img src="{% static 'contact/assets/imgs/popup-cover.jpg' %}" class="fit-width" alt="">
+					<h3>Not Available Yet</h3>
+
+					<div class="buttons centered marginTop">
+						<a href="#" class="black" data-dismiss="modal">CLOSE</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<script src="{% static 'contact/assets/js/jquery-3.2.1.min.js' %}"></script>
+		<script src="{% static 'contact/assets/js/modernizr-touch-events.js' %}"></script>
+
+		<script src="{% static 'contact/assets/js/bootstrap.min.js' %}"></script>
+
+		<script src="{% static 'contact/assets/lightgallery/js/lightgallery.min.js'%}"></script>
+
+		<script src="{% static 'contact/contactme/js/weakmap-polyfill.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/formdata.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/bootstrap-datepicker.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/bootstrap-datepicker-lang/en.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/jquery.timepicker.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/select2.full.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/select2-lang/en.js' %}"></script>
+
+		<script src="{% static 'contact/contactme/js/EQCSS-1.7.0.min.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/contactme-config.js' %}"></script>
+		<script src="{% static 'contact/contactme/js/contactme-1.4.js' %}"></script>
+
+
+
+
+		<script src="{% static 'contact/assets/js/jonny-1.2.js' %}"></script>
+	</body>
+
+
+</html>
+
+
+{% endblock %}

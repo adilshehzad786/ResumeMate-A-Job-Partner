@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<div class="row">
+                  <div class="col-lg-12 m-30px-b sm-m-15px-b">
+                    <div class="contact-form">
+                        <h4 class="dark-color font-alt m-20px-b">Say Something</h4>
+                        <form class="gform" action="https://script.google.com/macros/s/AKfycbw86cmXfwlkU7HSlSZ-FkMuuJL9ekBz_L2e0fbZ/exec" method="post">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="name" name="name" type="text" placeholder="Name" class="validate form-control" required="">
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="email" type="email" placeholder="Email" name="email" class="validate form-control" required="">
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                                </div>
+                                <div class="col-md-12">
+                                <div class="form-group">
+                                  <textarea id="message" placeholder="Your Comment" name="message" class="form-control" required=""></textarea>
+                                  <span class="input-focus-effect theme-bg"></span>
+                                </div>
+                               </div>
+                                <div class="col-md-12">
+                                  <div class="send">
+                                     <button class="btn btn-theme" type="submit" name="send"> send message</button>
+                                  </div>
+                                  <span class="output_message"></span>
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                  </div> <!-- col -->
+                </div>
+{% endblock %}
