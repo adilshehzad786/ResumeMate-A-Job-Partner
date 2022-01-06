@@ -6,7 +6,7 @@ azure-storage-blob==2.1.0
 azure-storage-common==2.1.0
 beautifulsoup4==4.8.2
 billiard==3.3.0.23
-celery==3.1.26.post2
+celery==5.2.2
 certifi==2019.11.28
 cffi==1.13.2
 chardet==3.0.4
